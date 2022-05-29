@@ -1,4 +1,4 @@
-package day16_notations;
+package tests.day16_notations;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -16,23 +16,31 @@ public class C07_SoftAssert extends TestBase {
     public void test01() {
         // 1. “http://zero.webappsecurity.com/” Adresine gidin
         driver.get("http://zero.webappsecurity.com/");
+
         // 2. Sign in butonuna basin
         driver.findElement(By.id("signin_button")).click();
+
         // 3. Login kutusuna “username” yazin
         driver.findElement(By.xpath("//input[@id='user_login']")).sendKeys("username");
+
         // 4. Password kutusuna “password” yazin
         driver.findElement(By.xpath("//input[@id='user_password']")).sendKeys("password" + Keys.ENTER);
+
         // 5. Sign in tusuna basin
         driver.navigate().back();
+
         // 6. Online banking menusu icinde Pay Bills sayfasina gidin
         driver.findElement(By.xpath("//strong[text()='Online Banking']")).click();
+
         // 7. “Purchase Foreign Currency” tusuna basin
         driver.findElement(By.xpath("//span[@id='pay_bills_link']")).click();
         driver.findElement(By.linkText("Purchase Foreign Currency")).click();
+
         // 8. “Currency” drop down menusunden Eurozone’u secin
         WebElement ddm = driver.findElement(By.xpath("//select[@id='pc_currency']"));
         Select select = new Select(ddm);
         select.selectByVisibleText("Eurozone (euro)");
+
         // 9. soft assert kullanarak "Eurozone (Euro)" secildigini test edin
         SoftAssert softAssert = new SoftAssert();
         String secilenOption = select.getFirstSelectedOption().getText();
