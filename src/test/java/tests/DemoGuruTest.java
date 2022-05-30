@@ -1,5 +1,9 @@
 package tests;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,10 +11,13 @@ import pages.DemoGuruPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.io.File;
+import java.io.IOException;
+
 public class DemoGuruTest {
 
     @Test
-    public void test01() throws InterruptedException {
+    public void test01() throws InterruptedException, IOException {
 
         DemoGuruPage demoGuruPage = new DemoGuruPage();
 
@@ -35,12 +42,20 @@ public class DemoGuruTest {
         Thread.sleep(2000);
 
         //    CREDIT SIDE da Amount bolumune ise ikinci 5000  butonunu surukle ve birak
-       actions.dragAndDrop(demoGuruPage.ikinciBesbinButonu,demoGuruPage.creditSideAmount).perform();
+        actions.dragAndDrop(demoGuruPage.ikinciBesbinButonu, demoGuruPage.creditSideAmount).perform();
         Thread.sleep(2000);
 
         //    Perfect butonun goruntulendigini dogrulayin
 
-        Assert.assertTrue(demoGuruPage.perfectYazisi.isDisplayed());
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+        WebElement sonucYaziElementi = demoGuruPage.perfectYazisi;
+
+        File sonucYaziElementiSS = new File("target/ekranGoruntuleri/sonucYazisiSS.jpeg");
+        File temp = sonucYaziElementi.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(temp,sonucYaziElementiSS);
+
+        //Assert.assertTrue(demoGuruPage.perfectYazisi.isDisplayed());
         Thread.sleep(2000);
 
         Driver.closeDriver();
