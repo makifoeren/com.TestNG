@@ -25,6 +25,7 @@ public class C01_YeniDriverIlkClass  {
 
 
         Driver.getDriver().get("https://www.bestbuy.com");
+
         Driver.getDriver().get("https://www.techproeducation.com");
 
         Driver.closeDriver();

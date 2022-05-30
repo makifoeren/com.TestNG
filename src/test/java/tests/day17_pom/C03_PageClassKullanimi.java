@@ -9,9 +9,9 @@ import utilities.Driver;
 public class C03_PageClassKullanimi {
 
     @Test
-    public void test01() {
+    public void test01() throws InterruptedException {
 
-        FacebookPage facebookPage=new FacebookPage();
+        FacebookPage facebookPage = new FacebookPage();
 
         //facebook anasayfaya gidin
 
@@ -20,7 +20,7 @@ public class C03_PageClassKullanimi {
         facebookPage.cookieButonu.click();
 
         // kullanici mail kutusuna rast gele bir isim yazdirin
-        Faker faker=new Faker();
+        Faker faker = new Faker();
         facebookPage.mailKutusu.sendKeys(faker.internet().emailAddress());
 
 
@@ -32,7 +32,7 @@ public class C03_PageClassKullanimi {
 
         //girilemedigini test edin
         Assert.assertTrue(facebookPage.girilemediYaziElementi.isDisplayed());
-
+        Thread.sleep(1000);
         Driver.closeDriver();
 
     }

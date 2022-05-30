@@ -20,7 +20,8 @@ public class Tanim {
     Degisen ikinci satir olur. Public WebElement a Elementi olurken digerinde public
     List<WebElemnt> aElemntleriListesi
 
-    5--Driver class i olusturup bize driver dondurecek getDriver() ve driveri kapatacak closeDriver() methodlarina olusturduj
+    5--Driver class i olusturup bize driver dondurecek getDriver() ve driveri kapatacak closeDriver()
+     methodlarina olusturduj
     Bu iki methoda heryerden kolayca erisebilmek icin methidlar static olarak tanimladik
 
     POM da java nin altindaki 3 package

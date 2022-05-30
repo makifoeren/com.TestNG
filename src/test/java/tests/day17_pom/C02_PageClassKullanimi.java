@@ -11,6 +11,7 @@ public class C02_PageClassKullanimi {
 
     @Test
     public void test01() {
+
         AmazonPage amazonPage = new AmazonPage();
 
         Driver.getDriver().get("https://www.amazon.com");
@@ -19,15 +20,16 @@ public class C02_PageClassKullanimi {
 
         amazonPage.aramaKutusu.sendKeys("nutella" + Keys.ENTER);
 
-        //sonuc yazisinin nutelle icerdigini test edelim
-        String actualSonuc=amazonPage.sonucsayisi.getText();
-        String arananKelime="nutella";
 
-        Assert.assertTrue(actualSonuc.contains(arananKelime));
+        //sonuc yazisinin nutelle icerdigini test edelim
+
+        String expectedSonuc="nutella";
+        String actualSonuc= amazonPage.sonucsayisi.getText();
+
+        Assert.assertTrue(actualSonuc.contains(expectedSonuc));
+
 
         Driver.closeDriver();
-
-
 
     }
 }
