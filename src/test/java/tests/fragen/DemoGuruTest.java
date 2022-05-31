@@ -58,7 +58,7 @@ public class DemoGuruTest {
         //Assert.assertTrue(demoGuruPage.perfectYazisi.isDisplayed());
         Thread.sleep(2000);
 
-        //Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 }
