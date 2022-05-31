@@ -56,8 +56,8 @@ public class Driver {
             }
 
 
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();  // herseferinde driver atiyor if ile bunu engellmis olduk
+           // WebDriverManager.chromedriver().setup();
+            //driver = new ChromeDriver();  // herseferinde driver atiyor if ile bunu engellmis olduk
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
@@ -72,6 +72,6 @@ public class Driver {
             driver = null;//sonraki acmalarda soruun olmasin
 //null degise kapat.  aciksa driver null degilse diye yazilir. bir deger atanmmaissa kapatamaz
 
-    }
+        }
     }
 }

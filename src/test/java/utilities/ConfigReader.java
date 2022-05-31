@@ -16,7 +16,8 @@ public class ConfigReader {
         String dosyaYolu="configuration.properties"; // fis ten sonra buraya
 
         try {
-            FileInputStream fis=new FileInputStream(dosyaYolu); // fis olusturup dosya yolunu tanimlayaip try catch
+            FileInputStream fis=new FileInputStream(dosyaYolu); // fis olusturup dosya yolunu tanimlayaip
+            // try catch
             // fis dosya yolunu tanimladigimiz configuration.properties dosyasini okudu
             properties=new Properties();
             properties.load(fis); // fis in okudugu bilgileri propertis e yukledi(load)
@@ -37,7 +38,8 @@ public class ConfigReader {
 
         String key  configuration.properties buraya gidip oradan bize string ifadesinin value degerini getirecek
 
-        BURAYI YAPMAK ICIN STATIC BLOK DEVREYE GIRIP PROPERTIES DEVREYE GIRCEK ONUN ICIN 15. SATIR VE SONRASINI OLUSTURUYORUZ
+        BURAYI YAPMAK ICIN STATIC BLOK DEVREYE GIRIP PROPERTIES DEVREYE GIRCEK ONUN ICIN
+         15. SATIR VE SONRASINI OLUSTURUYORUZ
          */
         return properties.getProperty(key);
     }

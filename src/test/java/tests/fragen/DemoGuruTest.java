@@ -1,4 +1,4 @@
-package tests;
+package tests.fragen;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Keys;
@@ -58,7 +58,7 @@ public class DemoGuruTest {
         //Assert.assertTrue(demoGuruPage.perfectYazisi.isDisplayed());
         Thread.sleep(2000);
 
-        Driver.closeDriver();
+        //Driver.closeDriver();
 
     }
 }
