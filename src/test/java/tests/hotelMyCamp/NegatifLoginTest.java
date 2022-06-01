@@ -51,7 +51,7 @@ public class NegatifLoginTest {
     }
 
     @Test
-    public void testNegatifName() throws InterruptedException {
+    public void negatifNameTest() throws InterruptedException {
 
         HotelMyCampPage hotel = new HotelMyCampPage();
 
@@ -88,7 +88,7 @@ public class NegatifLoginTest {
 
 
     @Test
-    public void testNegatifPass() throws InterruptedException, IOException {
+    public void negatifPassTest() throws InterruptedException, IOException {
 
         HotelMyCampPage hotel = new HotelMyCampPage();
 

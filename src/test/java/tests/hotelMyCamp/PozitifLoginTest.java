@@ -1,16 +1,22 @@
 package tests.hotelMyCamp;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.io.File;
+import java.io.IOException;
+
 public class PozitifLoginTest {
 
 
     @Test
-    public void testPozitif() throws InterruptedException {
+    public void testPozitif() throws InterruptedException, IOException {
         HotelMyCampPage hotel = new HotelMyCampPage();
 
         //    1 ) Bir Class olustur //: Posi tiveTest
@@ -40,7 +46,12 @@ public class PozitifLoginTest {
 
         Assert.assertTrue(hotel.girisTest.isDisplayed());
 
-        Driver.closeDriver();
+        WebElement sonucYaziElementi=hotel.girisTest;
 
+        File sonucYaziElementiSS=new File("target/ekranGoruntuleri/sonucYazisiSS.jpeg");
+
+        File temp = sonucYaziElementi.getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(temp,sonucYaziElementiSS);
+        Driver.closeDriver();
     }
 }
