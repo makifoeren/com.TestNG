@@ -70,11 +70,19 @@ public class HotelMyCampPage {
     @FindBy(xpath= "//*[text()='OK']")
     public WebElement ok;
 
-    @FindBy(xpath= "//*[text()='Hotelrooms']")
-    public WebElement hotelRoomsYazi;
+    @FindBy(xpath= "//*[text()='Hotel Management']")
+    public WebElement hotelManegement2;
+
+    @FindBy(xpath= "(//li//ul//li)[6]")
+    public WebElement hotelRooms2;
 
     @FindBy(xpath= "(//*[text()='List Of Hotelrooms'])[2]")
-    public WebElement ListOfHotelRoomsYazi;
+    public WebElement listOfHotelRooms;
+
+    @FindBy(xpath= "(//span[@class='title'])[1]")
+    public WebElement systemManagement;
+
+
 
 
 

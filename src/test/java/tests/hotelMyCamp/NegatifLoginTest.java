@@ -14,10 +14,11 @@ import java.io.IOException;
 
 public class NegatifLoginTest {
 
+    HotelMyCampPage hotel;
     @Test
     public void testNegatif() throws InterruptedException {
 
-        HotelMyCampPage hotel = new HotelMyCampPage();
+       hotel = new HotelMyCampPage();
 
         //    1 ) Bir Class olustur //: Negativ
         //    2) Bir test method olustur NegativLoginTest()
