@@ -14,9 +14,10 @@ import java.io.IOException;
 
 public class NegatifLoginTest {
 
+    BrcPage brc;
     @Test
     public void yanlisSifre() {
-        BrcPage brc = new BrcPage();
+      brc = new BrcPage();
 
         // Bir test method olustur positiveLoginTest()
         // https://www.bluerentalcars.com/ adresine git
@@ -48,7 +49,7 @@ public class NegatifLoginTest {
     @Test
     public void yanlisKullanici() {
 
-        BrcPage brc = new BrcPage();
+         brc = new BrcPage();
 
         // Bir test method olustur positiveLoginTest()
         // https://www.bluerentalcars.com/ adresine git
@@ -78,8 +79,7 @@ public class NegatifLoginTest {
 
     @Test
     public void yanlisKullaniciVeSifre() throws IOException {
-
-        BrcPage brc = new BrcPage();
+     brc = new BrcPage();
 
         // Bir test method olustur positiveLoginTest()
         // https://www.bluerentalcars.com/ adresine git
