@@ -31,6 +31,76 @@ public class HotelMyCampPage {
     @FindBy(xpath= "//*[text()='Try again please']")
     public WebElement basarisizGirisTest;
 
+    @FindBy(xpath= "//*[text()='Hotel Management']")
+    public WebElement hotelManegement;
+
+    @FindBy(xpath= "(//i[@class='icon-calendar'])[3]")
+    public WebElement hotelRooms;
+
+    @FindBy(xpath= "//a[@class='btn btn-circle btn-default']")
+    public WebElement addRooms;
+
+    @FindBy(xpath= "(//select[@id='IDHotel'])")
+    public WebElement hotelDropDown;
+
+    @FindBy(xpath= "//input[@id='Code']")
+    public WebElement code;
+
+    @FindBy(xpath= "(//a[@class='label label-success'])[3]")
+    public WebElement preis400;
+
+    @FindBy(xpath= "//input[@title='Price']")
+    public WebElement preis;
+
+    @FindBy(xpath= "//select[@title='Select Room Type']")
+    public WebElement roomDropDown;
+
+    @FindBy(xpath= " //input[@name='MaxAdultCount']")
+    public WebElement maxAdult;
+
+    @FindBy(xpath= "//input[@id='IsAvailable']")
+    public WebElement available;
+
+    @FindBy(xpath= "//button[@id='btnSubmit']")
+    public WebElement save;
+
+    @FindBy(xpath= "//div[@class='bootbox-body']")
+    public WebElement yazi;
+
+    @FindBy(xpath= "//*[text()='OK']")
+    public WebElement ok;
+
+    @FindBy(xpath= "//*[text()='Hotelrooms']")
+    public WebElement hotelRoomsYazi;
+
+    @FindBy(xpath= "(//*[text()='List Of Hotelrooms'])[2]")
+    public WebElement ListOfHotelRoomsYazi;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
