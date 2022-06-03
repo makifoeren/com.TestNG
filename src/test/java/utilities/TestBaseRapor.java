@@ -18,12 +18,13 @@ public abstract class TestBaseRapor {
 
     protected static ExtentReports extentReports; //extent report'a ilk atamayi yapar
     protected static ExtentTest extentTest; // test pass veya failed gibi bilgileri kaydeder.
-    // Ayrica ekran resmi icin de kullaniriz
+    // Ayrica ekran resmi icin de kullaniriz info deyip bilgi olusturuyoru
     protected static ExtentHtmlReporter extentHtmlReporter; // Html raporu duzenler
 
     // Test işlemine başlamadan hemen önce (test methodundan önce değil, tüm test işleminden önce)
 
-    @BeforeTest(alwaysRun = true) // alwaysRun : her zaman çalıştır.
+    @BeforeTest(alwaysRun = true) // en basta tum class ve methodlardan once calisir
+    // alwaysRun : her zaman çalıştır.
     public void setUpTest() {
         extentReports = new ExtentReports(); // Raporlamayi baslatir
         //rapor oluştuktan sonra raporunuz nereye eklensin istiyorsanız buraya yazıyorsunuz.

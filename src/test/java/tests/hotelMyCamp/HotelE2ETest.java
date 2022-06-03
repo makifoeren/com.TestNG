@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 import java.security.Key;
@@ -85,6 +86,8 @@ public class HotelE2ETest extends TestBaseRapor {
 
         hotelMy.hotelRooms2.sendKeys(Keys.ENTER);
         Thread.sleep(1000);
+
+
 
         //  12. "LIST OF HOTELROOMS" textinin göründüğünü doğrulayın.
         Assert.assertTrue(hotelMy.listOfHotelRooms.isDisplayed());
