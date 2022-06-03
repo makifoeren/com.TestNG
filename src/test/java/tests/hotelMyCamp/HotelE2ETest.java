@@ -10,15 +10,18 @@ import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
 import java.security.Key;
 
-public class HotelE2ETest {
+public class HotelE2ETest extends TestBaseRapor {
+    HotelMyCampPage hotelMy;
+
     @Test
     public void roomCreateTest() throws InterruptedException {
 
-
-        HotelMyCampPage hotelMy = new HotelMyCampPage();
+     extentTest = extentReports.createTest("Pozitif Login", "Gecerli user nama ve sifre ile girirs yapabilmeli");
+       hotelMy = new HotelMyCampPage();
 
         //   E2E Testing / C r eate R oom T est
         //  1. Tests packagenin altına class olusturun: D18_HotelRoomCreation
@@ -48,6 +51,7 @@ public class HotelE2ETest {
         Select select = new Select(ddm);
         select.selectByIndex(5);
         Thread.sleep(1000);
+
         Actions actions = new Actions(Driver.getDriver());
         actions.click(hotelMy.code).
                 sendKeys("30163").sendKeys(Keys.TAB).
@@ -56,28 +60,35 @@ public class HotelE2ETest {
                 sendKeys("03.06 saat 14.30 da girisi yapacagim.").sendKeys(Keys.TAB).
                 dragAndDrop(hotelMy.preis400, hotelMy.preis).perform();
         Thread.sleep(1000);
+
         WebElement ddmroom = hotelMy.roomDropDown;
         Select selectroom = new Select(ddmroom);
         selectroom.selectByIndex(2);
         actions.click(hotelMy.maxAdult).sendKeys("2").sendKeys(Keys.TAB).
                 sendKeys("3").sendKeys(Keys.TAB).perform();
         Thread.sleep(1000);
+
         hotelMy.available.click();
         Thread.sleep(1000);
+
         //  8. Save butonuna basin.
         hotelMy.save.click();
         Thread.sleep(1000);
+
         //  9. “HotelRoom was inserted successfully” textinin göründüğünü test edin.
         Assert.assertTrue(hotelMy.yazi.isDisplayed());
+
         //  10. OK butonuna tıklayın.
         hotelMy.ok.click();
+
         //  11. Hotel rooms linkine tıklayın.
 
-        hotelMy.hotelManegement.click();
-        hotelMy.hotelRooms.click();
+        hotelMy.hotelRooms2.sendKeys(Keys.ENTER);
         Thread.sleep(1000);
+
         //  12. "LIST OF HOTELROOMS" textinin göründüğünü doğrulayın.
         Assert.assertTrue(hotelMy.listOfHotelRooms.isDisplayed());
         Driver.closeDriver();
+
     }
 }
