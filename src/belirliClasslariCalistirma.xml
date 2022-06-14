@@ -3,7 +3,7 @@
    test methodlarini calistirabiliriz. bunu icin yapmamiz gereken; suite den baslayip
     test hiyerarsisine uygun olarak calisacak tum testlerin xml formatinda yazmamizdir.
     eger istedigimiz tum testlere ulasmamız için birden fazla hiyerarşi olusturmamız gerekirse
- sonraki hiyerarşileri uygun adımdan başlatmamız gerekir
+ sonraki hiyerarşileri uygun adımdan başlatmamız gerekir...
         -->
 <suite name="istenen classlari calistirma">
     <test name="classlar">

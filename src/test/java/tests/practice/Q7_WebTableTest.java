@@ -22,8 +22,8 @@ public class Q7_WebTableTest extends TestBaseRapor {
     'List of companies acquired by Dell Inc.' isimli tabloya gidin,
     tablonun 4. satırını konsolda yazdırın
     ayrıca 5. satırdaki 2. ve 3. öğeleri (ortadaki 2 öğe) konsola yazdırın
-    ( 2nd and 3rd ogeler : November 2, Cloud integration leader)
-    6. satirin ilk hucresinde Compellent yazisinin goruntulendigini dogrulayin
+    ( 2nd and 3rd ogeler : November 2, Cloud integration leader)...
+    6. satirin ilk hucresinde Compellent yazisinin goruntulendigini dogrulayin...
     */
 
     @Test
