@@ -8,11 +8,12 @@ import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.TestBaseRapor;
 
 import java.io.File;
 import java.io.IOException;
 
-public class PozitifLoginTest {
+public class PozitifLoginTest  {
 
 
     @Test
@@ -35,7 +36,7 @@ public class PozitifLoginTest {
 
         //    test data password :
         //    Manager 1
-        hotel.password.sendKeys(ConfigReader.getProperty("hotelPalidPassword"));
+        hotel.password.sendKeys(ConfigReader.getProperty("hotelWalidPassword"));
 
         Thread.sleep(1000);
 
